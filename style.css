@@ -1,0 +1,285 @@
+* {
+  user-select: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Varela Round", sans-serif;
+}
+
+.sure {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  z-index: 100;
+  transition: visibility 0.2s linear;
+}
+
+.sure .sure-inner {
+  background: rgb(248, 248, 248);
+  width: 30rem;
+  height: 20rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.29, 0.29, 0.06, 1.47);
+}
+
+.sure .ex-mark {
+  width: 6rem;
+}
+
+.sure-text {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.s-text {
+  color: #595959;
+  display: block;
+  text-align: center;
+}
+
+.disclamer {
+  font-size: 1.1rem;
+  margin-top: 0.4rem;
+}
+
+.main-btns {
+  margin-bottom: 0.5rem;
+}
+
+.s-btn {
+  background: #db3236;
+  color: #fff;
+  margin-right: 0.6rem;
+}
+
+.c-btn {
+  background: #3085d6;
+  color: #fff;
+  margin-left: 0.6rem;
+}
+
+.sure-btn {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  padding: 0.6rem 1.3rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.search {
+  font-family: inherit;
+  padding: 0.5rem 0;
+  padding-left: 0.2rem;
+  background: rgba(153, 153, 153, 0.3);
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease;
+}
+
+.container {
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px #4e4e4e;
+}
+
+.err {
+  text-align: center;
+  padding: 0.8rem 0.5rem;
+  font-size: 1.4rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  font-size: 1.3rem;
+  padding: 0.8rem 0.5rem;
+  padding-right: 2.6rem;
+  margin-top: 0.5rem;
+  word-wrap: break-word;
+  position: relative;
+}
+
+ul i {
+  font-size: 1.2rem;
+}
+
+#main-text {
+  user-select: text;
+  text-transform: capitalize;
+}
+
+.inside {
+  width: 100%;
+  height: 100%;
+}
+
+ul button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 2.5rem;
+  border: none;
+  background: #db3236;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.item-name {
+  margin-top: 1rem;
+  outline: none;
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  font-family: inherit;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.item-name:focus,
+.search:focus {
+  box-shadow: 1px 1px 5px rgb(189, 112, 12), -1px -1px 5px rgb(189, 112, 12);
+  border-color: rgb(189, 133, 12);
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 1.1rem;
+  padding: 0.6rem 1rem;
+  padding-top: 0.65rem;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  background: rgb(39, 39, 39);
+  color: rgb(236, 236, 236);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn:active {
+  padding: 0.5rem 0.6rem;
+  padding-top: 0.55rem;
+  margin: 0.1rem 0.3rem;
+  margin-bottom: 1.1rem;
+  margin-top: 1.1rem;
+}
+
+li,
+.item-name,
+.err {
+  border: 1px solid #464646;
+  border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sure .sure-inner {
+    width: 25rem;
+    height: 17rem;
+  }
+
+  .sure-text {
+    font-size: 1.7rem;
+  }
+
+  .disclamer {
+    font-size: 1rem;
+  }
+
+  .sure .ex-mark {
+    width: 5rem;
+  }
+
+  .sure-btn {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .item-name {
+    width: 95%;
+  }
+  .container {
+    width: 80%;
+  }
+  .err,
+  ul li {
+    padding: 0.6rem 0.5rem;
+    font-size: 1.2rem;
+  }
+  ul li {
+    padding-right: 2.6rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .item-name {
+    font-size: 1.3rem;
+  }
+
+  .sure .sure-inner {
+    width: 20rem;
+    height: 14rem;
+  }
+
+  .sure-text {
+    font-size: 1.6rem;
+  }
+
+  .disclamer {
+    font-size: 1rem;
+  }
+
+  .sure .ex-mark {
+    width: 4rem;
+  }
+
+  .sure-btn {
+    font-size: 1rem;
+  }
+}

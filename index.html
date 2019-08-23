@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/4b12aae445.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>KEEPit</title>
+  </head>
+  <body>
+    <div class="sure">
+      <div class="sure-inner">
+        <div></div>
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/pics-427c1.appspot.com/o/exclamation-circle.png?alt=media&token=d6bb4558-f0ef-4140-911d-cf7bb766fc7e"
+          alt="icon"
+          class="ex-mark"
+        />
+        <div class="text-hold">
+          <span class="sure-text s-text">Are You Sure?</span>
+          <span class="disclamer s-text"
+            >You won't be able to revert this!</span
+          >
+        </div>
+        <div class="main-btns">
+          <button class="sure-btn s-btn">Yes, delete!</button
+          ><button class="sure-btn c-btn">cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <input type="text" placeholder="Search..." class="search" />
+      <h1>Add Items</h1>
+      <div class="form">
+        <input type="text" class="item-name" />
+        <input type="submit" value="Keep" class="btn btn-dark" />
+      </div>
+      <div class="err">Keep Your Items</div>
+      <ul id="items" class="list-group"></ul>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
